@@ -1,6 +1,6 @@
 FROM jboss/base-jdk:8
 
-MAINTAINER Erik Jacobs <erikmjacobs@gmail.com>
+MAINTAINER Ricardo Arguello <ricardo.arguello@gmail.com>
 
 COPY parksmap-web.jar /parksmap.jar
 CMD java -jar /parksmap.jar
