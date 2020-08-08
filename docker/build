@@ -2,17 +2,17 @@ pushd ..
 mvn clean install
 cp target/parksmap-web.jar ./docker/parksmap-web.jar
 popd
-docker build -t "openshiftroadshow/parksmap:latest" .
+podman build -t parksmap:latest .
 
 echo "-------------------------------------------"
 echo ""
-echo "Now to publish the image in dockerhub do:"
+echo "Now to publish the image in quay.io do:"
 echo ""
-echo " docker login # With your docker credentials"
+echo " podman login quay.io # With your quay.io credentials"
 echo ""
-echo " docker tag openshiftroadshow/parksmap:latest openshiftroadshow/parksmap:<VERSION>"
+echo " podman tag parksmap:latest quay.io/ricardoarguello/parksmap:<VERSION>"
 echo ""
-echo " docker push openshiftroadshow/parksmap:<VERSION>"
+echo " podman push quay.io/ricardoarguello/parksmap:<VERSION>"
 echo ""
 echo " NOTE: Replace <VERSION> with the actual version of the image you're building"
 echo ""
